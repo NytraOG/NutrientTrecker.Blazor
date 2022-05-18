@@ -1,0 +1,74 @@
+﻿@page "/heatmapchart-features"
+@using Syncfusion.Blazor.HeatMap
+<h2>HeatMap Chart</h2>
+<br/>
+<div id = "ControlRegion">
+<SfHeatMap Theme="Theme.Bootstrap5" DataSource="@HeatMapData" ShowTooltip="true">
+        <HeatMapEvents TooltipRendering="@TooltipRendering"></HeatMapEvents>
+        <HeatMapTitleSettings Text="Sales Revenue Per Employee (in 1000 US$)"></HeatMapTitleSettings>
+        <HeatMapPaletteSettings Type="PaletteType.Gradient" ></HeatMapPaletteSettings>
+        <HeatMapXAxis Labels="@XAxisLabels" ValueType="Syncfusion.Blazor.HeatMap.ValueType.Numeric" OpposedPosition="true"  IsInversed="true" ></HeatMapXAxis>
+        <HeatMapYAxis Labels="@YAxisLabels" ValueType="Syncfusion.Blazor.HeatMap.ValueType.Numeric" OpposedPosition="true" IsInversed="true" ></HeatMapYAxis>
+        <HeatMapLegendSettings Position="LegendPosition.Left" Alignment="Alignment.Center" ></HeatMapLegendSettings>
+    </SfHeatMap>
+</div>
+<br/>
+<div>
+  <h3>Selected Features:</h3>
+    <ul class="ulstyle">
+      <li class="list"> Axis Type - Numeric</li>
+      <li class="list"> Axis Opposed Position</li>
+      <li class="list"> Axis Inversed</li>
+      <li class="list"> Tooltip</li>
+      <li class="list"> Palette Mode - Gradient</li>
+      <li class="list"> Legend Placement - Left</li>
+      <li class="list"> Legend Alignment - Center</li>
+      <li class="list"> Theme - Bootstrap v5</li>
+    </ul>
+</div>
+<br/>
+<style>
+    .ulstyle {
+        margin: 0px;
+        padding-left: 20px;
+        display: inline-block;
+    }
+    .list {
+    float: left;
+    line-height: 20px;
+    margin: 10px;
+    min-width: 220px;
+    }
+</style>
+@code{
+    int[,] GetDefaultData()
+    {
+        int[,] DataSource = new int[,]
+        {
+      { 10, 8, 7, 7, 10, 14 },
+                { 10, 8, 7, 6, 8, 13 },
+                {12, 10, 8, 7, 7, 10},
+                {11, 9, 8, 7, 7, 12},
+                {15, 15, 15, 15, 16, 14},
+                {13, 13, 12, 12, 12, 17},
+                {11, 10, 9, 9, 10, 12},
+                {18, 20, 21, 20, 17, 15},
+                {18, 19, 19, 17, 15, 13},
+                {21, 21, 21, 19, 18, 17},
+                {21, 22, 21, 19, 16, 15},
+                {16, 17, 17, 16, 14, 12 }
+            };
+        return DataSource;
+    }
+    string[] XAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael", "Robert", "Laura", "Anne", "Paul", "Karin", "Mario" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    public object HeatMapData { get; set; }
+    protected override void OnInitialized()
+    {
+        HeatMapData = GetDefaultData();
+    }
+     public void TooltipRendering(TooltipEventArgs args)
+    {
+        args.Content = new string[] {"The revenue of " + args.XLabel + " was " + args.Value + " million dollors" };
+    }
+}

@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>5f29d7a3-4666-43fe-baca-79be575ef713</UserSecretsId>
+  </PropertyGroup>
+  
+  <ItemGroup>
+      <PackageReference Include="Syncfusion.Blazor.Grid" Version="20.1.0.56" />
+    <PackageReference Include="Syncfusion.Blazor.HeatMap" Version="20.1.0.56" />
+    <PackageReference Include="Syncfusion.Blazor.LinearGauge" Version="20.1.0.56" />
+    <PackageReference Include="Syncfusion.Blazor.BarcodeGenerator" Version="20.1.0.56" />
+    <PackageReference Include="Syncfusion.Blazor.Kanban" Version="20.1.0.56" />
+    <PackageReference Include="Syncfusion.Blazor.ProgressBar" Version="20.1.0.56" />
+    <PackageReference Include="Syncfusion.Blazor.RichTextEditor" Version="20.1.0.56" />
+    <PackageReference Include="Syncfusion.Blazor.PdfViewerServer.Windows" Version="20.1.0.56" />
+    <PackageReference Include="Syncfusion.Blazor.Calendars" Version="20.1.0.56" />
+    <PackageReference Include="Syncfusion.Blazor.DropDowns" Version="20.1.0.56" />
+    <PackageReference Include="Syncfusion.Blazor.Lists" Version="20.1.0.56" />
+    <PackageReference Include="Syncfusion.Blazor.Popups" Version="20.1.0.56" />
+    <PackageReference Include="Syncfusion.Blazor.Inputs" Version="20.1.0.56" />
+    <PackageReference Include="Syncfusion.Blazor.Buttons" Version="20.1.0.56" />
+    <PackageReference Include="Syncfusion.Blazor.Notifications" Version="20.1.0.56" />
+    <PackageReference Include="Syncfusion.Blazor.Spinner" Version="20.1.0.56" />
+    <PackageReference Include="Syncfusion.Pdf.Net.Core" Version="20.1.0.56" />
+    <PackageReference Include="Syncfusion.XlsIO.Net.Core" Version="20.1.0.56" />
+    <PackageReference Include="Syncfusion.Blazor.Navigations" Version="20.1.0.56" />
+    <PackageReference Include="Syncfusion.Blazor.Themes" Version="20.1.0.56" />
+  </ItemGroup>
+  
+
+</Project>
