@@ -1,4 +1,6 @@
-﻿using NutrientTrecker.Data;
+﻿using Domain.Data;
+using Microsoft.EntityFrameworkCore;
+using NutrientTrecker.Data;
 using Syncfusion.Blazor;
 using Syncfusion.Licensing;
 
@@ -10,6 +12,11 @@ builder.Services.AddSingleton<PdfService>();
 builder.Services.AddSingleton<ExcelService>();
 builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddRazorPages();
+
+builder.Services.AddDbContext<DataContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 
 builder.Services.AddServerSideBlazor()
        .AddHubOptions(o =>

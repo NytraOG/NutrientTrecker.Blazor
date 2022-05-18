@@ -7,10 +7,17 @@
     <projectFile profileName="IIS Express">Frontend/Frontend.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15297f8a-b494-4802-a875-de25f1e1e6b4" name="Changes" comment="Demopages in Demofolder verschoben">
-      <change afterPath="$PROJECT_DIR$/Domain.Tests/Domain.Tests.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutrientTrecker.sln" beforeDir="false" afterPath="$PROJECT_DIR$/NutrientTrecker.sln" afterDir="false" />
+    <list default="true" id="15297f8a-b494-4802-a875-de25f1e1e6b4" name="Changes" comment="Mehr Ordner">
+      <change afterPath="$PROJECT_DIR$/Domain/Data/DataContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Entitäten/BaseCrudObject.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Entitäten/Nahrungsmittel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Interfaces/ICrudService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Interfaces/INahrhaft.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NutrientTrecker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NutrientTrecker/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Frontend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Frontend.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +123,7 @@
       <option name="presentableId" value="Default" />
       <updated>1652896191996</updated>
       <workItem from="1652896197597" duration="688000" />
-      <workItem from="1652897181113" duration="865000" />
+      <workItem from="1652897181113" duration="4917000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1652897443406</created>
@@ -132,7 +139,21 @@
       <option name="project" value="LOCAL" />
       <updated>1652897644003</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Projektstruktur angelegt">
+      <created>1652898110635</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1652898110635</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Mehr Ordner">
+      <created>1652898181069</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1652898181069</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +177,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Init" />
     <MESSAGE value="Demopages in Demofolder verschoben" />
-    <option name="LAST_COMMIT_MESSAGE" value="Demopages in Demofolder verschoben" />
+    <MESSAGE value="Projektstruktur angelegt" />
+    <MESSAGE value="Mehr Ordner" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mehr Ordner" />
   </component>
 </project>
