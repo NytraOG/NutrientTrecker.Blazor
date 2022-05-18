@@ -7,7 +7,11 @@
     <projectFile profileName="IIS Express">Frontend/Frontend.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15297f8a-b494-4802-a875-de25f1e1e6b4" name="Changes" comment="Init" />
+    <list default="true" id="15297f8a-b494-4802-a875-de25f1e1e6b4" name="Changes" comment="Demopages in Demofolder verschoben">
+      <change afterPath="$PROJECT_DIR$/Domain.Tests/Domain.Tests.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutrientTrecker.sln" beforeDir="false" afterPath="$PROJECT_DIR$/NutrientTrecker.sln" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,20 +28,23 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="29LdEbBSk5fr0qZn4pGNYW3tQfw" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
-    <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Frontend: NutrientTrecker">
     <configuration name="Frontend: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Frontend/Frontend.csproj" />
@@ -109,7 +116,7 @@
       <option name="presentableId" value="Default" />
       <updated>1652896191996</updated>
       <workItem from="1652896197597" duration="688000" />
-      <workItem from="1652897181113" duration="323000" />
+      <workItem from="1652897181113" duration="865000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1652897443406</created>
@@ -118,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652897443406</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Demopages in Demofolder verschoben">
+      <created>1652897644003</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1652897644003</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,8 +152,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init" />
+    <MESSAGE value="Demopages in Demofolder verschoben" />
+    <option name="LAST_COMMIT_MESSAGE" value="Demopages in Demofolder verschoben" />
   </component>
 </project>
