@@ -9,8 +9,8 @@ public abstract class BaseCrudObject
         ModifiedAt = DateTime.Now;
     }
 
-    protected Guid     Id         { get; set; }
-    protected string   Name       { get; set; }
-    protected DateTime CreatedAt  { get; set; }
-    protected DateTime ModifiedAt { get; set; }
+    public Guid     Id         { get; set; }
+    public string   Name       { get; set; }
+    public DateTime CreatedAt  { get; set; }
+    public DateTime ModifiedAt { get; set; }
 }

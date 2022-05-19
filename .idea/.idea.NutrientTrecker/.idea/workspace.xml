@@ -7,17 +7,20 @@
     <projectFile profileName="IIS Express">Frontend/Frontend.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15297f8a-b494-4802-a875-de25f1e1e6b4" name="Changes" comment="Mehr Ordner">
-      <change afterPath="$PROJECT_DIR$/Domain/Data/DataContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Entitäten/BaseCrudObject.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Entitäten/Nahrungsmittel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Interfaces/ICrudService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Interfaces/INahrhaft.cs" afterDir="false" />
+    <list default="true" id="15297f8a-b494-4802-a875-de25f1e1e6b4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Domain/Entitäten/Security/User.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Interfaces/Security/ICredentials.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Data/DataContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Migrations/20220518230832_UserEntity.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Migrations/20220518230832_UserEntity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Migrations/DataContextModelSnapshot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NutrientTrecker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NutrientTrecker/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain.Tests/Domain.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Domain.Tests/Domain.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Data/DataContext.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Entitäten/BaseCrudObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entitäten/BaseCrudObject.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Frontend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Frontend.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,15 +46,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Frontend: NutrientTrecker">
     <configuration name="Frontend: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Frontend/Frontend.csproj" />
@@ -123,7 +127,8 @@
       <option name="presentableId" value="Default" />
       <updated>1652896191996</updated>
       <workItem from="1652896197597" duration="688000" />
-      <workItem from="1652897181113" duration="4917000" />
+      <workItem from="1652897181113" duration="5908000" />
+      <workItem from="1652914562013" duration="1522000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1652897443406</created>
@@ -153,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652898181069</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="basecruentität, interfaces">
+      <created>1652912449734</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652912449734</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +191,7 @@
     <MESSAGE value="Demopages in Demofolder verschoben" />
     <MESSAGE value="Projektstruktur angelegt" />
     <MESSAGE value="Mehr Ordner" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mehr Ordner" />
+    <MESSAGE value="basecruentität, interfaces" />
+    <option name="LAST_COMMIT_MESSAGE" value="basecruentität, interfaces" />
   </component>
 </project>

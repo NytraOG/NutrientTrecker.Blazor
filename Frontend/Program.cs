@@ -1,4 +1,4 @@
-﻿using Domain.Data;
+﻿using Frontend.Data;
 using Microsoft.EntityFrameworkCore;
 using NutrientTrecker.Data;
 using Syncfusion.Blazor;
@@ -15,7 +15,7 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<DataContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString"));
 });
 
 builder.Services.AddServerSideBlazor()
