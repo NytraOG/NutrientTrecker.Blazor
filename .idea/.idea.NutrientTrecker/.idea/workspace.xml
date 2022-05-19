@@ -8,19 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15297f8a-b494-4802-a875-de25f1e1e6b4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Domain/Entitäten/Security/User.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Interfaces/Security/ICredentials.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Data/DataContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Migrations/20220518230832_UserEntity.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Migrations/20220518230832_UserEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Migrations/DataContextModelSnapshot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutrientTreckerRelations.drawio" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NutrientTrecker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NutrientTrecker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain.Tests/Domain.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Domain.Tests/Domain.Tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Data/DataContext.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Entitäten/BaseCrudObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entitäten/BaseCrudObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Frontend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Frontend.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +117,7 @@
       <updated>1652896191996</updated>
       <workItem from="1652896197597" duration="688000" />
       <workItem from="1652897181113" duration="5908000" />
-      <workItem from="1652914562013" duration="1522000" />
+      <workItem from="1652914562013" duration="4293000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1652897443406</created>
@@ -165,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652912449734</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="committi vergessi">
+      <created>1652944149452</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1652944149452</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +188,7 @@
     <MESSAGE value="Projektstruktur angelegt" />
     <MESSAGE value="Mehr Ordner" />
     <MESSAGE value="basecruentität, interfaces" />
-    <option name="LAST_COMMIT_MESSAGE" value="basecruentität, interfaces" />
+    <MESSAGE value="committi vergessi" />
+    <option name="LAST_COMMIT_MESSAGE" value="committi vergessi" />
   </component>
 </project>
