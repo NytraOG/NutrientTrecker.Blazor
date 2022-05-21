@@ -1,4 +1,6 @@
-﻿namespace Domain.Entitäten;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Domain.Entitäten;
 
 public abstract class Base
 {
@@ -9,7 +11,9 @@ public abstract class Base
         ModifiedAt = DateTime.Now;
     }
 
-    public Guid     Id         { get; set; }
+    [Key]
+    public Guid Id { get; set; }
+
     public string   Name       { get; set; }
     public DateTime CreatedAt  { get; set; }
     public DateTime ModifiedAt { get; set; }

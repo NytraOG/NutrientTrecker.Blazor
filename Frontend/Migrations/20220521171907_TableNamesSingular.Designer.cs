@@ -4,6 +4,7 @@ using Frontend.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Frontend.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20220521171907_TableNamesSingular")]
+    partial class TableNamesSingular
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -130,7 +132,7 @@ namespace Frontend.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Dish");
+                    b.ToTable("Dishe");
                 });
 
             modelBuilder.Entity("Domain.Entitäten.FoodStuff", b =>
@@ -271,7 +273,7 @@ namespace Frontend.Migrations
 
                     b.HasIndex("DayId");
 
-                    b.ToTable("LogEntry");
+                    b.ToTable("LogEntrie");
                 });
 
             modelBuilder.Entity("Domain.Entitäten.Security.User", b =>

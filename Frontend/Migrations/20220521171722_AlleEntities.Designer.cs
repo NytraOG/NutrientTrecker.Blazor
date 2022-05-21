@@ -4,6 +4,7 @@ using Frontend.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Frontend.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20220521171722_AlleEntities")]
+    partial class AlleEntities
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -97,7 +99,7 @@ namespace Frontend.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Day");
+                    b.ToTable("Days");
                 });
 
             modelBuilder.Entity("Domain.Entitäten.Dish", b =>
@@ -130,7 +132,7 @@ namespace Frontend.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Dish");
+                    b.ToTable("Dishes");
                 });
 
             modelBuilder.Entity("Domain.Entitäten.FoodStuff", b =>
@@ -192,7 +194,7 @@ namespace Frontend.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Image");
+                    b.ToTable("Images");
                 });
 
             modelBuilder.Entity("Domain.Entitäten.Ingredient", b =>
@@ -226,7 +228,7 @@ namespace Frontend.Migrations
 
                     b.HasIndex("FoodStuffId");
 
-                    b.ToTable("Ingredient");
+                    b.ToTable("Ingredients");
                 });
 
             modelBuilder.Entity("Domain.Entitäten.LogEntry", b =>
@@ -271,7 +273,7 @@ namespace Frontend.Migrations
 
                     b.HasIndex("DayId");
 
-                    b.ToTable("LogEntry");
+                    b.ToTable("LogEntries");
                 });
 
             modelBuilder.Entity("Domain.Entitäten.Security.User", b =>
@@ -304,7 +306,7 @@ namespace Frontend.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("User");
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("Domain.Entitäten.Consumed", b =>
