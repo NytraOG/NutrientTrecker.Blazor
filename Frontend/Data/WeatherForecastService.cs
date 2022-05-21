@@ -1,4 +1,4 @@
-﻿namespace NutrientTrecker.Data
+﻿namespace Frontend.Data
 {
     public class WeatherForecastService
     {

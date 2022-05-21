@@ -1,8 +1,7 @@
-﻿using Syncfusion.XlsIO;
-using Syncfusion.Drawing;
-using System.IO;
+﻿using Syncfusion.Drawing;
+using Syncfusion.XlsIO;
 
-namespace NutrientTrecker.Data
+namespace Frontend.Data
 {
     public class ExcelService
     {

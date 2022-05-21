@@ -7,6 +7,8 @@ namespace Infrastructure.Persistence;
 
 public class DataContext : DbContext, IApplicationDbContext
 {
+    public DataContext() { }
+
     public DataContext(DbContextOptions<DataContext> options)
             : base(options) { }
 
@@ -21,5 +23,9 @@ public class DataContext : DbContext, IApplicationDbContext
 
     public Task<int> SaveChangesAsync() => base.SaveChangesAsync();
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) { }
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        if (!optionsBuilder.IsConfigured)
+            optionsBuilder.UseSqlServer("server=DESKTOP-7FA7F9C\\MSSQLSERVER2019;database=nyTEC.NutrientTrecker_Dev;trusted_connection=true");
+    }
 }

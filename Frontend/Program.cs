@@ -1,6 +1,6 @@
-﻿using Infrastructure;
+﻿using Frontend.Data;
+using Infrastructure;
 using Infrastructure.Persistence;
-using NutrientTrecker.Data;
 using Syncfusion.Blazor;
 using Syncfusion.Licensing;
 

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace NutrientTrecker.Data
+﻿namespace Frontend.Data
 {
     public class KanbanDataModels
     {
