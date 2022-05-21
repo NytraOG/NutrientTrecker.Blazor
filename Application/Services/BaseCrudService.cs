@@ -14,9 +14,9 @@ public abstract class BaseCrudService<TEntity, TModel> : ICrudService<TEntity, T
 
     public abstract Task<TEntity> CreateAsync(TModel model);
 
-    public Task<TEntity> UpdateAsync(TModel model, Guid id) => throw new NotImplementedException();
+    public abstract Task<TEntity> UpdateAsync(TModel model, Guid id);
 
-    public Task DeleteAsync(Guid id) => throw new NotImplementedException();
+    public abstract Task DeleteAsync(Guid id);
 
     public abstract Task SaveAsync();
 }

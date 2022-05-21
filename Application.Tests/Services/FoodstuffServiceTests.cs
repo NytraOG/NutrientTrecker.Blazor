@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Application.Exceptions;
 using Application.Interfaces;
@@ -52,7 +53,7 @@ public class FoodstuffServiceTests : BaseCrudServiceTests<FoodStuff, FoodstuffMo
     public async Task CreateAsync_ModelGutBestückt_EntitätPersistiert()
     {
         // Arrange
-        var model = new FoodstuffModel { Carbs = 100, Fett = 200, Protein = 300, Kcal = 400, Name = "Whey"};
+        var model = new FoodstuffModel { Carbs = 100, Fett = 200, Protein = 300, Kcal = 400, Name = "Whey" };
 
         // Act
         var foodstuff = await Service.CreateAsync(model);
@@ -60,7 +61,7 @@ public class FoodstuffServiceTests : BaseCrudServiceTests<FoodStuff, FoodstuffMo
 
         // Assert
         var result = await Service.GetAsync(foodstuff.Id);
-        
+
         Assert.IsNotNull(result);
     }
 
@@ -68,7 +69,7 @@ public class FoodstuffServiceTests : BaseCrudServiceTests<FoodStuff, FoodstuffMo
     public async Task CreateAsync_ModelGutBestückt_PropertiesMapped()
     {
         // Arrange
-        var model = new FoodstuffModel { Carbs = 100, Fett = 200, Protein = 300, Kcal = 400, Name = "Whey"};
+        var model = new FoodstuffModel { Carbs = 100, Fett = 200, Protein = 300, Kcal = 400, Name = "Whey" };
 
         // Act
         var foodstuff = await Service.CreateAsync(model);
@@ -81,5 +82,52 @@ public class FoodstuffServiceTests : BaseCrudServiceTests<FoodStuff, FoodstuffMo
         Assert.AreEqual(model.Fett, result.Fett);
         Assert.AreEqual(model.Protein, result.Protein);
         Assert.AreEqual(model.Kcal, result.Kcal);
+    }
+
+    [TestMethod]
+    [ExpectedException(typeof(EntityNotFoundException<FoodStuff>))]
+    public async Task UpdateAsync_EntitätNichtGefunden_ThrowsException() => await Service.UpdateAsync(new FoodstuffModel(), Guid.NewGuid());
+
+    [TestMethod]
+    public async Task UpdateAsync_EntitätGefundenUndModelGutBestückt_UpdatePersistiert()
+    {
+        // Arrange
+        var foodstuff = new FoodStuff { Name       = "Sand" };
+        var model     = new FoodstuffModel { Carbs = 100, Fett = 200, Protein = 300, Kcal = 400, Name = "Whey" };
+
+        await DBContextMock.AddAsync(foodstuff);
+        await Service.SaveAsync();
+
+        // Act 
+        await Service.UpdateAsync(model, foodstuff.Id);
+        await Service.SaveAsync();
+
+        // Assert
+        var result = await Service.GetAsync(foodstuff.Id);
+
+        Assert.AreEqual(model.Carbs, result.Carbs);
+        Assert.AreEqual(model.Fett, result.Fett);
+        Assert.AreEqual(model.Protein, result.Protein);
+        Assert.AreEqual(model.Kcal, result.Kcal);
+        Assert.AreEqual(model.Name, result.Name);
+    }
+
+    [TestMethod]
+    public async Task DeleteAsync_EntitätExistiert_EntitätGelöscht()
+    {
+        // Arrange
+        var foodstuff = new FoodStuff { Name = "Pferd" };
+
+        await DBContextMock.AddAsync(foodstuff);
+        await Service.SaveAsync();
+
+        // Act
+        await Service.DeleteAsync(foodstuff.Id);
+        await Service.SaveAsync();
+
+        // Assert
+        var resultSet = await Service.GetAllAsync();
+
+        Assert.AreEqual(0, resultSet.ToList().Count);
     }
 }

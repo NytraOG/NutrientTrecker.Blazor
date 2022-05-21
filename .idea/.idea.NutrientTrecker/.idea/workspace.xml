@@ -7,15 +7,12 @@
     <projectFile profileName="IIS Express">Frontend/Frontend.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15297f8a-b494-4802-a875-de25f1e1e6b4" name="Changes" comment="Tests laufen an">
+    <list default="true" id="15297f8a-b494-4802-a875-de25f1e1e6b4" name="Changes" comment="Noch mehr tests">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NutrientTrecker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NutrientTrecker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application.Tests/MemoryDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application.Tests/MemoryDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application.Tests/Services/FoodstuffServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application.Tests/Services/FoodstuffServiceTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Interfaces/IApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Interfaces/IApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Exceptions/EntityNotFoundException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Exceptions/EntityNotFoundException.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application/Services/BaseCrudService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/BaseCrudService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application/Services/FoodstuffService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/FoodstuffService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Models/FoodstuffModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Models/FoodstuffModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Persistence/DataContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Persistence/DataContext.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +30,7 @@
     <setting file="file://$PROJECT_DIR$/Application.Tests/Services/FoodstuffServiceTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Application.Tests/Services/SecurityServiceTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Application.Tests/Utils/HasherTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Repos/Privat/NutrientTrecker.Blazor/Application/Services/BaseCrudService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Repos/Privat/NutrientTrecker.Blazor/Application/Services/BaseCrudService.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -133,7 +131,7 @@
       <workItem from="1652914562013" duration="4293000" />
       <workItem from="1652988610596" duration="658000" />
       <workItem from="1653147894622" duration="10819000" />
-      <workItem from="1653158868365" duration="8113000" />
+      <workItem from="1653158868365" duration="9081000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1652897443406</created>
@@ -254,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653174231829</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Noch mehr tests">
+      <created>1653175106251</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1653175106251</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,6 +298,7 @@
     <MESSAGE value="inMemory nervt ein bisschen?!" />
     <MESSAGE value="DbSetMock läuft endlich in Memory" />
     <MESSAGE value="Tests laufen an" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tests laufen an" />
+    <MESSAGE value="Noch mehr tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Noch mehr tests" />
   </component>
 </project>

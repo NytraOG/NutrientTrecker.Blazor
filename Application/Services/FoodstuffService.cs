@@ -14,7 +14,9 @@ public class FoodstuffService : BaseCrudService<FoodStuff, FoodstuffModel>
 
     public override async Task<FoodStuff> GetAsync(Guid id)
     {
-        var foodstuff = await Context.FoodStuff.FirstOrDefaultAsync(f => f.Id == id);
+        var foodstuff = await Context.FoodStuff
+                                     .FirstOrDefaultAsync(f => f.Id == id)
+                                     .ConfigureAwait(false);
 
         if (foodstuff is null)
             throw new EntityNotFoundException<FoodStuff>(id);
@@ -33,10 +35,33 @@ public class FoodstuffService : BaseCrudService<FoodStuff, FoodstuffModel>
             Name    = model.Name
         };
 
-        await Context.FoodStuff.AddAsync(foodstuff);
+        await Context.FoodStuff
+                     .AddAsync(foodstuff)
+                     .ConfigureAwait(false);
 
         return foodstuff;
     }
 
-    public override Task SaveAsync() => Context.SaveChangesAsync();
+    public override async Task<FoodStuff> UpdateAsync(FoodstuffModel model, Guid id)
+    {
+        var foodstuff = await GetAsync(id);
+
+        foodstuff.Carbs   = model.Carbs;
+        foodstuff.Fett    = model.Fett;
+        foodstuff.Protein = model.Protein;
+        foodstuff.Kcal    = model.Kcal;
+        foodstuff.Name    = model.Name;
+        
+        return foodstuff;
+    }
+
+    public override async Task DeleteAsync(Guid id)
+    {
+        var foodstuff = await GetAsync(id);
+
+        Context.FoodStuff.Remove(foodstuff);
+    }
+
+    public override async Task SaveAsync() => await Context.SaveChangesAsync()
+                                                           .ConfigureAwait(false);
 }
