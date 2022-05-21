@@ -7,15 +7,16 @@
     <projectFile profileName="IIS Express">Frontend/Frontend.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15297f8a-b494-4802-a875-de25f1e1e6b4" name="Changes" comment="Keine wahnung warum die config nicht greift :/">
-      <change afterPath="$PROJECT_DIR$/Application.Tests/MemoryDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Services/BaseCrudService.cs" afterDir="false" />
+    <list default="true" id="15297f8a-b494-4802-a875-de25f1e1e6b4" name="Changes" comment="inMemory nervt ein bisschen?!">
+      <change afterPath="$PROJECT_DIR$/Application.Tests/TestUtils.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NutrientTrecker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NutrientTrecker/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application.Tests/Application.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Application.Tests/Application.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application.Tests/MemoryDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application.Tests/MemoryDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application.Tests/Services/BaseCrudServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application.Tests/Services/BaseCrudServiceTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application.Tests/Services/FoodstuffServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application.Tests/Services/FoodstuffServiceTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Interfaces/ICrudService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Interfaces/ICrudService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Services/BaseCrudService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/BaseCrudService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application/Services/FoodstuffService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/FoodstuffService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Persistence/DataContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Persistence/DataContext.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +133,7 @@
       <workItem from="1652914562013" duration="4293000" />
       <workItem from="1652988610596" duration="658000" />
       <workItem from="1653147894622" duration="10819000" />
-      <workItem from="1653158868365" duration="1951000" />
+      <workItem from="1653158868365" duration="6277000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1652897443406</created>
@@ -232,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653159351622</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="inMemory nervt ein bisschen?!">
+      <created>1653161072825</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1653161072825</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,6 +276,26 @@
     <MESSAGE value="Projektstruktur glatt gezogen" />
     <MESSAGE value="Projektstruktur Refactor fertig" />
     <MESSAGE value="Keine wahnung warum die config nicht greift :/" />
-    <option name="LAST_COMMIT_MESSAGE" value="Keine wahnung warum die config nicht greift :/" />
+    <MESSAGE value="inMemory nervt ein bisschen?!" />
+    <option name="LAST_COMMIT_MESSAGE" value="inMemory nervt ein bisschen?!" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Application.Tests/Services/FoodstuffServiceTests.cs</url>
+          <line>16</line>
+          <properties documentPath="D:\Repos\Privat\NutrientTrecker.Blazor\Application.Tests\Services\FoodstuffServiceTests.cs" initialLine="16" containingFunctionPresentation="method 'GetAll_ZweiDatensätzeVorhanden_BeideDatensätzeZurückgegeben'">
+            <startOffsets>
+              <option value="551" />
+            </startOffsets>
+            <endOffsets>
+              <option value="552" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

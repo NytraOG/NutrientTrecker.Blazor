@@ -7,4 +7,6 @@ namespace Application.Services;
 public class FoodstuffService : BaseCrudService<FoodStuff, FoodstuffModel>
 {
     public FoodstuffService(IApplicationDbContext context) : base(context) { }
+
+    public override async Task<IEnumerable<FoodStuff>> GetAllAsync() => context.FoodStuff;
 }

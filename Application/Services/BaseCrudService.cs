@@ -2,13 +2,13 @@
 
 namespace Application.Services;
 
-public class BaseCrudService<TEntity, TModel> : ICrudService<TEntity, TModel>
+public abstract class BaseCrudService<TEntity, TModel> : ICrudService<TEntity, TModel>
 {
-    private readonly IApplicationDbContext context;
+    protected readonly IApplicationDbContext context;
 
     protected BaseCrudService(IApplicationDbContext context) => this.context = context;
 
-    public Task<IEnumerable<TEntity>> GetAllAsync() => throw new NotImplementedException();
+    public abstract Task<IEnumerable<TEntity>> GetAllAsync();
 
     public Task<TEntity> GetAsync(Guid id) => throw new NotImplementedException();
 
