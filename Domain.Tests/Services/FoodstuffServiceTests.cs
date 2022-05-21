@@ -17,6 +17,4 @@ public class FoodstuffServiceTests
         adapterMock = new Mock<IConnectionAdapter>();
         service     = new FoodstuffService(adapterMock.Object);
     }
-    
-    
 }
