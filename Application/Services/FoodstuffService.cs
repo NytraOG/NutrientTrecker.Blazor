@@ -1,8 +1,8 @@
-﻿using Domain.Entitäten;
-using Domain.Interfaces;
+﻿using Application.Interfaces;
+using Domain.Entitäten;
 using Domain.Models;
 
-namespace Domain.Services;
+namespace Application.Services;
 
 public class FoodstuffService : ICrudService<FoodStuff, FoodstuffModel>
 {

@@ -1,8 +1,6 @@
-﻿using Domain.Interfaces.Security;
+﻿namespace Domain.Entitäten.Security;
 
-namespace Domain.Entitäten.Security;
-
-public class User : Base, ICredentials
+public class User : Base
 {
     public User() => Days = new List<Day>();
 

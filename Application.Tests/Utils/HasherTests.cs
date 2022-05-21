@@ -1,8 +1,8 @@
 ﻿using System;
-using Domain.Utils;
+using Application.Utils;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Domain.Tests.Utils;
+namespace Application.Tests.Utils;
 
 [TestClass]
 public class HasherTests

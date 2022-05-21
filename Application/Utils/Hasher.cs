@@ -1,6 +1,6 @@
 ﻿using System.Security.Cryptography;
 
-namespace Domain.Utils;
+namespace Application.Utils;
 
 public static class Hasher
 {

@@ -7,28 +7,38 @@
     <projectFile profileName="IIS Express">Frontend/Frontend.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15297f8a-b494-4802-a875-de25f1e1e6b4" name="Changes" comment="committs jetzt sichtbar?!">
-      <change afterPath="$PROJECT_DIR$/Application.Tests/Application.Tests.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application.Tests/Class1.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Application.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Interfaces/IApplicationDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Migrations/20220521180227_NewNamespace.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Migrations/20220521180227_NewNamespace.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Migrations/DataContextModelSnapshot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Persistence/DependencyInjection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure.Tests/Class1.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure.Tests/Infrastructure.Tests.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" afterDir="false" />
+    <list default="true" id="15297f8a-b494-4802-a875-de25f1e1e6b4" name="Changes" comment="Projektstruktur glatt gezogen">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NutrientTrecker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NutrientTrecker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Data/DataContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Persistence/DataContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application.Tests/Application.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Application.Tests/Application.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application.Tests/Class1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain.Tests/Services/BaseCrudServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application.Tests/Services/BaseCrudServiceTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain.Tests/Services/FoodstuffServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application.Tests/Services/FoodstuffServiceTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain.Tests/Services/SecurityServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application.Tests/Services/SecurityServiceTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain.Tests/Utils/HasherTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application.Tests/Utils/HasherTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Entitäten/Dish.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entitäten/Dish.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Entitäten/Security/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entitäten/Security/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Interfaces/IApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Interfaces/IApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Interfaces/IConnectionAdapter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Interfaces/IConnectionAdapter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Interfaces/ICrudService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Interfaces/ICrudService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Interfaces/Security/ICredentials.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Migrations/20220521180227_NewNamespace.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Migrations/20220521180227_NewNamespace.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Migrations/DataContextModelSnapshot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Persistence/DataContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Persistence/DataContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Persistence/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/DependencyInjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Services/FoodstuffService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/FoodstuffService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Services/SecurityService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/SecurityService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Utils/Hasher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Utils/Hasher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Utils/ImageConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Utils/ImageConverter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Frontend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Frontend.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Migrations/20220518230832_UserEntity.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Migrations/20220518230832_UserEntity.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Migrations/20220521171722_AlleEntities.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Migrations/20220521171722_AlleEntities.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Migrations/20220521171907_TableNamesSingular.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Migrations/20220521171907_TableNamesSingular.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Migrations/20220521171953_nochEinScheißTabellennameKekw.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Migrations/20220521171953_nochEinScheißTabellennameKekw.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Migrations/DataContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Migrations/DataContextModelSnapshot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutrientTrecker.sln" beforeDir="false" afterPath="$PROJECT_DIR$/NutrientTrecker.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +53,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/560715f37b394601a679d012b0ba480aa7f0/68/16a6abb9/Executor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5956701c92ec47bc98145555cd08eafca23890/b1/d0c735a1/MemoryStream.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Repos/Privat/NutrientTrecker.Blazor/Domain/Entitäten/Day.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Repos/Privat/NutrientTrecker.Blazor/Frontend/Migrations/20220518230832_UserEntity.Designer.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -141,7 +152,7 @@
       <workItem from="1652897181113" duration="5908000" />
       <workItem from="1652914562013" duration="4293000" />
       <workItem from="1652988610596" duration="658000" />
-      <workItem from="1653147894622" duration="9965000" />
+      <workItem from="1653147894622" duration="10613000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1652897443406</created>
@@ -220,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653155609449</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Projektstruktur glatt gezogen">
+      <created>1653158100438</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1653158100438</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,6 +271,7 @@
     <MESSAGE value="Migrations durch" />
     <MESSAGE value="Foddstuffservice trocken rein, tdd undso" />
     <MESSAGE value="committs jetzt sichtbar?!" />
-    <option name="LAST_COMMIT_MESSAGE" value="committs jetzt sichtbar?!" />
+    <MESSAGE value="Projektstruktur glatt gezogen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Projektstruktur glatt gezogen" />
   </component>
 </project>

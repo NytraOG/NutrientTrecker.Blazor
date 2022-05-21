@@ -2,7 +2,7 @@
 using Domain.Entitäten.Security;
 using Microsoft.EntityFrameworkCore;
 
-namespace Domain.Interfaces;
+namespace Application.Interfaces;
 
 public interface IApplicationDbContext
 {

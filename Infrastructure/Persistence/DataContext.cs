@@ -1,15 +1,14 @@
-﻿using Domain.Entitäten;
+﻿using Application.Interfaces;
+using Domain.Entitäten;
 using Domain.Entitäten.Security;
-using Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-namespace Domain.Persistence;
+namespace Infrastructure.Persistence;
 
 public class DataContext : DbContext, IApplicationDbContext
 {
-    public DataContext() { }
-
-    public DataContext(DbContextOptions<DataContext> options) : base(options) { }
+    public DataContext(DbContextOptions<DataContext> options)
+            : base(options) { }
 
     public DbSet<User>       User       { get; set; }
     public DbSet<Consumed>   Consumed   { get; set; }

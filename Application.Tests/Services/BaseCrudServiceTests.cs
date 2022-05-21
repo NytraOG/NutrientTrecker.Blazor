@@ -1,7 +1,7 @@
-﻿using Domain.Interfaces;
+﻿using Application.Interfaces;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Domain.Tests.Services;
+namespace Application.Tests.Services;
 
 [TestClass]
 public abstract class BaseCrudServiceTests<TEntity, TModel>

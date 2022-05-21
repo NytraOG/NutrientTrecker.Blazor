@@ -1,4 +1,5 @@
-﻿using Domain.Persistence;
+﻿using Infrastructure;
+using Infrastructure.Persistence;
 using NutrientTrecker.Data;
 using Syncfusion.Blazor;
 using Syncfusion.Licensing;

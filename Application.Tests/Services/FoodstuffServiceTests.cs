@@ -1,9 +1,9 @@
-﻿using Domain.Interfaces;
-using Domain.Services;
+﻿using Application.Interfaces;
+using Application.Services;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
-namespace Domain.Tests.Services;
+namespace Application.Tests.Services;
 
 [TestClass]
 public class FoodstuffServiceTests
