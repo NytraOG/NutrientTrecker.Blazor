@@ -10,11 +10,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-namespace Frontend.Migrations
+namespace Domain.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220521171953_nochEinScheißTabellennameKekw")]
-    partial class nochEinScheißTabellennameKekw
+    [Migration("20220521180227_NewNamespace")]
+    partial class NewNamespace
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -297,11 +297,11 @@ namespace Frontend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Password")
+                    b.Property<string>("PasswordHash")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Salt")
+                    b.Property<string>("PasswordSalt")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
