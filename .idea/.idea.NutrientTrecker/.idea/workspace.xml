@@ -7,14 +7,22 @@
     <projectFile profileName="IIS Express">Frontend/Frontend.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15297f8a-b494-4802-a875-de25f1e1e6b4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Domain.Tests/Services/SecurityServiceTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain.Tests/Utils/HasherTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Services/SecurityService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Utils/Hasher.cs" afterDir="false" />
+    <list default="true" id="15297f8a-b494-4802-a875-de25f1e1e6b4" name="Changes" comment="Salted Passwordhasher und ein paar Tests rein">
+      <change afterPath="$PROJECT_DIR$/Domain/Entitäten/BaseConsumableVolume.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Entitäten/Consumed.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Entitäten/Day.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Entitäten/Dish.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Entitäten/Image.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Entitäten/Ingredient.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Entitäten/LogEntry.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Utils/ImageConverter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NutrientTrecker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NutrientTrecker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain.Tests/Domain.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Domain.Tests/Domain.Tests.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Entitäten/BaseCrudObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entitäten/Base.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Entitäten/Nahrungsmittel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entitäten/FoodStuff.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Entitäten/Security/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entitäten/Security/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Interfaces/ICrudService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Interfaces/ICrudService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Interfaces/INahrhaft.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Interfaces/INutritious.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NutrientTreckerRelations.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/NutrientTreckerRelations.drawio" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +35,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3689ced8d6a6442ab813181f67025cc4459c00/85/378e8494/PdfDocument.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/560715f37b394601a679d012b0ba480aa7f0/68/16a6abb9/Executor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5956701c92ec47bc98145555cd08eafca23890/b1/d0c735a1/MemoryStream.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -125,7 +134,7 @@
       <workItem from="1652897181113" duration="5908000" />
       <workItem from="1652914562013" duration="4293000" />
       <workItem from="1652988610596" duration="658000" />
-      <workItem from="1653147894622" duration="2075000" />
+      <workItem from="1653147894622" duration="4024000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1652897443406</created>
@@ -169,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652944149452</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Salted Passwordhasher und ein paar Tests rein">
+      <created>1653150089222</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1653150089222</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,25 +213,7 @@
     <MESSAGE value="Mehr Ordner" />
     <MESSAGE value="basecruentität, interfaces" />
     <MESSAGE value="committi vergessi" />
-    <option name="LAST_COMMIT_MESSAGE" value="committi vergessi" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Domain/Utils/Hasher.cs</url>
-          <line>26</line>
-          <properties documentPath="D:\Repos\Privat\NutrientTrecker.Blazor\Domain\Utils\Hasher.cs" initialLine="26" containingFunctionPresentation="method 'GenerateHash'">
-            <startOffsets>
-              <option value="803" />
-            </startOffsets>
-            <endOffsets>
-              <option value="804" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Salted Passwordhasher und ein paar Tests rein" />
+    <option name="LAST_COMMIT_MESSAGE" value="Salted Passwordhasher und ein paar Tests rein" />
   </component>
 </project>

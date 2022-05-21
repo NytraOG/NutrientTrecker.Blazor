@@ -1,8 +1,8 @@
 ﻿namespace Domain.Entitäten;
 
-public abstract class BaseCrudObject
+public abstract class Base
 {
-    protected BaseCrudObject()
+    protected Base()
     {
         Id         = Guid.NewGuid();
         CreatedAt  = DateTime.Now;

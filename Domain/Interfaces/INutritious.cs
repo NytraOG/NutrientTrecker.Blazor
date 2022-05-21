@@ -1,6 +1,6 @@
 ﻿namespace Domain.Interfaces;
 
-public interface INahrhaft
+public interface INutritious
 {
     public double Kcal    { get; set; }
     public double Protein { get; set; }

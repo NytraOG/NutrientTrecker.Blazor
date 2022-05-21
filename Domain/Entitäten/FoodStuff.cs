@@ -2,8 +2,12 @@
 
 namespace Domain.Entitäten;
 
-public class Nahrungsmittel : BaseCrudObject, INahrhaft
+public class FoodStuff : Base, INutritious
 {
+    public List<Consumed> Consumed { get; set; }
+
+    //public Image  Image   { get; set; }
+    //public Image  Thumbnail   { get; set; }
     public double Kcal    { get; set; }
     public double Protein { get; set; }
     public double Fett    { get; set; }

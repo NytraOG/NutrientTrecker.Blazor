@@ -1,10 +1,13 @@
-﻿
-using Domain.Interfaces.Security;
+﻿using Domain.Interfaces.Security;
 
 namespace Domain.Entitäten.Security;
 
-public class User : BaseCrudObject, ICredentials
+public class User : Base, ICredentials
 {
-    public string EmailAddress { get; set; }
-    public string Password     { get; set; }
+    public User() => Days = new List<Day>();
+
+    public string    Salt         { get; set; }
+    public List<Day> Days         { get; set; }
+    public string    EmailAddress { get; set; }
+    public string    Password     { get; set; }
 }

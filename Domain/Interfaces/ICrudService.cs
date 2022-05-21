@@ -13,4 +13,4 @@ public interface ICrudService<out TEntity, in TModel>
     public void Delete(Guid id);
 
     public void Save();
-} 
+}
