@@ -21,4 +21,22 @@ public class FoodstuffService : BaseCrudService<FoodStuff, FoodstuffModel>
 
         return foodstuff;
     }
+
+    public override async Task<FoodStuff> CreateAsync(FoodstuffModel model)
+    {
+        var foodstuff = new FoodStuff
+        {
+            Carbs   = model.Carbs,
+            Protein = model.Protein,
+            Fett    = model.Fett,
+            Kcal    = model.Kcal,
+            Name    = model.Name
+        };
+
+        await Context.FoodStuff.AddAsync(foodstuff);
+
+        return foodstuff;
+    }
+
+    public override Task SaveAsync() => Context.SaveChangesAsync();
 }

@@ -47,4 +47,39 @@ public class FoodstuffServiceTests : BaseCrudServiceTests<FoodStuff, FoodstuffMo
         // Assert
         Assert.AreEqual(foodstuff.Id, result.Id);
     }
+
+    [TestMethod]
+    public async Task CreateAsync_ModelGutBestückt_EntitätPersistiert()
+    {
+        // Arrange
+        var model = new FoodstuffModel { Carbs = 100, Fett = 200, Protein = 300, Kcal = 400, Name = "Whey"};
+
+        // Act
+        var foodstuff = await Service.CreateAsync(model);
+        await Service.SaveAsync();
+
+        // Assert
+        var result = await Service.GetAsync(foodstuff.Id);
+        
+        Assert.IsNotNull(result);
+    }
+
+    [TestMethod]
+    public async Task CreateAsync_ModelGutBestückt_PropertiesMapped()
+    {
+        // Arrange
+        var model = new FoodstuffModel { Carbs = 100, Fett = 200, Protein = 300, Kcal = 400, Name = "Whey"};
+
+        // Act
+        var foodstuff = await Service.CreateAsync(model);
+        await Service.SaveAsync();
+
+        // Assert
+        var result = await Service.GetAsync(foodstuff.Id);
+
+        Assert.AreEqual(model.Carbs, result.Carbs);
+        Assert.AreEqual(model.Fett, result.Fett);
+        Assert.AreEqual(model.Protein, result.Protein);
+        Assert.AreEqual(model.Kcal, result.Kcal);
+    }
 }

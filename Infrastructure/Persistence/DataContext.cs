@@ -2,6 +2,7 @@
 using Domain.Entitäten;
 using Domain.Entitäten.Security;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace Infrastructure.Persistence;
 
@@ -20,6 +21,7 @@ public class DataContext : DbContext, IApplicationDbContext
     public DbSet<Image>      Image      { get; set; }
     public DbSet<Ingredient> Ingredient { get; set; }
     public DbSet<LogEntry>   LogEntry   { get; set; }
+
 
     public Task<int> SaveChangesAsync() => base.SaveChangesAsync();
 

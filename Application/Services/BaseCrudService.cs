@@ -12,11 +12,11 @@ public abstract class BaseCrudService<TEntity, TModel> : ICrudService<TEntity, T
 
     public abstract Task<TEntity> GetAsync(Guid id);
 
-    public Task<TEntity> CreateAsync(TModel model) => throw new NotImplementedException();
+    public abstract Task<TEntity> CreateAsync(TModel model);
 
     public Task<TEntity> UpdateAsync(TModel model, Guid id) => throw new NotImplementedException();
 
     public Task DeleteAsync(Guid id) => throw new NotImplementedException();
 
-    public Task SaveAsync() => throw new NotImplementedException();
+    public abstract Task SaveAsync();
 }

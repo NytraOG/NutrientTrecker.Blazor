@@ -1,6 +1,7 @@
 ﻿using Domain.Entitäten;
 using Domain.Entitäten.Security;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace Application.Interfaces;
 
