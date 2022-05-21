@@ -26,7 +26,13 @@ public static class TestUtils
                 using var viewCommand = context.Database.GetDbConnection().CreateCommand();
 
                 viewCommand.CommandText = @"
-CREATE VIEW AllResources AS
+CREATE VIEW AllTheFood AS
+SELECT *
+FROM Foodstuff;";
+                viewCommand.ExecuteNonQuery();
+
+                viewCommand.CommandText = @"
+CREATE VIEW AllDays AS
 SELECT *
 FROM Foodstuff;";
                 viewCommand.ExecuteNonQuery();
