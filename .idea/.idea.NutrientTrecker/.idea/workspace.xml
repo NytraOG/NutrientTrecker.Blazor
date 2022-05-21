@@ -8,8 +8,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15297f8a-b494-4802-a875-de25f1e1e6b4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/NutrientTreckerRelations.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain.Tests/Services/SecurityServiceTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain.Tests/Utils/HasherTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Services/SecurityService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Utils/Hasher.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NutrientTrecker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NutrientTrecker/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain.Tests/Domain.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Domain.Tests/Domain.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutrientTreckerRelations.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/NutrientTreckerRelations.drawio" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,6 +124,8 @@
       <workItem from="1652896197597" duration="688000" />
       <workItem from="1652897181113" duration="5908000" />
       <workItem from="1652914562013" duration="4293000" />
+      <workItem from="1652988610596" duration="658000" />
+      <workItem from="1653147894622" duration="2075000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1652897443406</created>
@@ -190,5 +198,24 @@
     <MESSAGE value="basecruentität, interfaces" />
     <MESSAGE value="committi vergessi" />
     <option name="LAST_COMMIT_MESSAGE" value="committi vergessi" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Domain/Utils/Hasher.cs</url>
+          <line>26</line>
+          <properties documentPath="D:\Repos\Privat\NutrientTrecker.Blazor\Domain\Utils\Hasher.cs" initialLine="26" containingFunctionPresentation="method 'GenerateHash'">
+            <startOffsets>
+              <option value="803" />
+            </startOffsets>
+            <endOffsets>
+              <option value="804" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
