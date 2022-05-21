@@ -1,20 +1,13 @@
 ﻿using Application.Interfaces;
 using Application.Services;
+using Domain.Entitäten;
+using Domain.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Moq;
 
 namespace Application.Tests.Services;
 
 [TestClass]
-public class FoodstuffServiceTests
+public class FoodstuffServiceTests : BaseCrudServiceTests<FoodStuff, FoodstuffModel>
 {
-    private Mock<IConnectionAdapter> adapterMock;
-    private FoodstuffService         service;
-
-    [TestInitialize]
-    public void Init()
-    {
-        adapterMock = new Mock<IConnectionAdapter>();
-        service     = new FoodstuffService(adapterMock.Object);
-    }
+    protected override ICrudService<FoodStuff, FoodstuffModel> Service => new FoodstuffService(DBContextMock?.Object!);
 }

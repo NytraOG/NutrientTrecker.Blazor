@@ -1,16 +1,16 @@
 ﻿namespace Application.Interfaces;
 
-public interface ICrudService<out TEntity, in TModel>
+public interface ICrudService<TEntity, in TModel>
 {
-    public IEnumerable<TEntity> GetAll();
+    public Task<IEnumerable<TEntity>> GetAllAsync();
 
-    public TEntity Get(Guid id);
+    public Task<TEntity> GetAsync(Guid id);
 
-    public TEntity Create(TModel model);
+    public Task<TEntity> CreateAsync(TModel model);
 
-    public TEntity Update(TModel model, Guid id);
+    public Task<TEntity> UpdateAsync(TModel model, Guid id);
 
-    public void Delete(Guid id);
+    public Task DeleteAsync(Guid id);
 
-    public void Save();
+    public Task SaveAsync();
 }
