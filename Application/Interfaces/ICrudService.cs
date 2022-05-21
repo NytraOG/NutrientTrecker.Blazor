@@ -2,15 +2,15 @@
 
 public interface ICrudService<TEntity, in TModel>
 {
-    public Task<IEnumerable<TEntity>> GetAllAsync();
+    Task<IEnumerable<TEntity>> GetAllAsync();
 
-    public Task<TEntity> GetAsync(Guid id);
+    Task<TEntity> GetAsync(Guid id);
 
-    public Task<TEntity> CreateAsync(TModel model);
+    Task<TEntity> CreateAsync(TModel model);
 
-    public Task<TEntity> UpdateAsync(TModel model, Guid id);
+    Task<TEntity> UpdateAsync(TModel model, Guid id);
 
-    public Task DeleteAsync(Guid id);
+    Task DeleteAsync(Guid id);
 
-    public Task SaveAsync();
+    Task SaveAsync();
 }

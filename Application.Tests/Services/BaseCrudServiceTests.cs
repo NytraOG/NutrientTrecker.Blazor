@@ -15,7 +15,7 @@ public abstract class BaseCrudServiceTests<TEntity, TModel>
     public void Init() => DBContextMock = TestUtils.CreateMemoryContext();
 
     [TestMethod]
-    public virtual async Task GetAll_ZweiDatensätzeVorhanden_BeideDatensätzeZurückgegeben()
+    public virtual async Task GetAllAsync_ZweiDatensätzeVorhanden_BeideDatensätzeZurückgegeben()
     {
         // Act
         var resultSet = await Service.GetAllAsync();
