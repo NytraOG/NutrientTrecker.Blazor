@@ -4,6 +4,8 @@ namespace Domain.Entitäten;
 
 public class FoodStuff : Base, INutritious
 {
+    public FoodStuff() => Consumed = new List<Consumed>();
+
     public List<Consumed> Consumed { get; set; }
 
     //public Image  Image   { get; set; }

@@ -4,6 +4,12 @@ namespace Domain.Entitäten;
 
 public class Day : Base
 {
+    public Day()
+    {
+        ConsumedStuff = new List<Consumed>();
+        Log           = new List<LogEntry>();
+    }
+
     public double         TotalCarbs    { get; set; }
     public double         TotalProtein  { get; set; }
     public double         TotalFat      { get; set; }

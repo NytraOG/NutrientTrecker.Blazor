@@ -7,15 +7,19 @@
     <projectFile profileName="IIS Express">Frontend/Frontend.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15297f8a-b494-4802-a875-de25f1e1e6b4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Frontend/Migrations/20220521171722_AlleEntities.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Migrations/20220521171722_AlleEntities.cs" afterDir="false" />
+    <list default="true" id="15297f8a-b494-4802-a875-de25f1e1e6b4" name="Changes" comment="Migrations durch">
+      <change afterPath="$PROJECT_DIR$/Domain.Tests/Services/FoodstuffServiceTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Interfaces/IConnectionAdapter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Models/FoodstuffModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Services/FoodstuffService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NutrientTrecker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NutrientTrecker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Entitäten/Base.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entitäten/Base.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Entitäten/BaseConsumableVolume.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entitäten/BaseConsumableVolume.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Entitäten/LogEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entitäten/LogEntry.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Data/DataContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Data/DataContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Migrations/DataContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Migrations/DataContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain.Tests/Domain.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Domain.Tests/Domain.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Entitäten/Day.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entitäten/Day.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Entitäten/Dish.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entitäten/Dish.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Entitäten/FoodStuff.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entitäten/FoodStuff.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Entitäten/Security/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entitäten/Security/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Interfaces/Security/ICredentials.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Interfaces/Security/ICredentials.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NutrientTreckerRelations.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/NutrientTreckerRelations.drawio" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +131,7 @@
       <workItem from="1652897181113" duration="5908000" />
       <workItem from="1652914562013" duration="4293000" />
       <workItem from="1652988610596" duration="658000" />
-      <workItem from="1653147894622" duration="5574000" />
+      <workItem from="1653147894622" duration="6930000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1652897443406</created>
@@ -185,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653152198145</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Migrations durch">
+      <created>1653153658869</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1653153658869</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +226,7 @@
     <MESSAGE value="committi vergessi" />
     <MESSAGE value="Salted Passwordhasher und ein paar Tests rein" />
     <MESSAGE value="Alle Entitäten reingemacht" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alle Entitäten reingemacht" />
+    <MESSAGE value="Migrations durch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Migrations durch" />
   </component>
 </project>
