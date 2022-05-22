@@ -13,6 +13,7 @@ builder.Services.AddSingleton<ExcelService>();
 builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddRazorPages();
 builder.Services.AddPersistence(builder.Configuration);
+builder.Services.AddApplicationServices();
 
 builder.Services.AddServerSideBlazor()
        .AddHubOptions(o =>

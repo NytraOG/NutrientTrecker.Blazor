@@ -1,7 +1,33 @@
 ﻿@page "/datagrid-features"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
+@using Domain.Entitäten
+@using Domain.Models
+@using Syncfusion.Blazor.Buttons
+@using SelectionType = Syncfusion.Blazor.Grids.SelectionType
+@inject FoodstuffService Service
+
 <h2>DataGrid</h2>
+<br/>
+<SfButton @ref="ToggleBtn" @onclick="OnToggleClick" CssClass="e-flat" IsToggle="true" IsPrimary="true" Content="Klick Me!"></SfButton>
+<SfButton @onclick="@RefreshData" Content="Refresh"></SfButton>
+<SfButton @onclick="@DeleteSelectedRecords" Content="Delete"></SfButton>
+<br/>
+<div id="meinGrid">
+    <SfGrid Id="meinGrid" @ref="FoodGrid" DataSource="@Entities" Toolbar="@(new List<string> { "Add", "Edit", "Delete", "Cancel", "Update", "ExcelExport", "Search" })">
+        <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal" AllowEditOnDblClick="true"></GridEditSettings>
+        <GridEvents OnToolbarClick="ToolbarKlick" TValue="FoodStuff"></GridEvents>
+        <GridColumns>
+            <GridColumn Type="ColumnType.CheckBox" Width="50"></GridColumn>
+            <GridColumn Field="@nameof(FoodStuff.Id)" HeaderText="Id" IsPrimaryKey="true" TextAlign="TextAlign.Right"></GridColumn>
+            <GridColumn Field="@nameof(FoodStuff.Name)" HeaderText="Name" TextAlign="TextAlign.Right"></GridColumn>
+            <GridColumn Field="@nameof(FoodStuff.Kcal)" HeaderText="Kcal" TextAlign="TextAlign.Right"></GridColumn>
+            <GridColumn Field="@nameof(FoodStuff.Carbs)" HeaderText="Carbs" TextAlign="TextAlign.Right"></GridColumn>
+            <GridColumn Field="@nameof(FoodStuff.Protein)" HeaderText="Protein" TextAlign="TextAlign.Right"></GridColumn>
+            <GridColumn Field="@nameof(FoodStuff.Fett)" HeaderText="Fett" TextAlign="TextAlign.Right"></GridColumn>
+        </GridColumns>
+    </SfGrid>
+</div>
 <br/>
 <div id="ControlRegion">
     <SfGrid ID="Grid" DataSource="@Orders" @ref="Grid" AllowPaging="true" AllowFiltering="true" AllowReordering="true" AllowResizing="true" AllowGrouping="true" AllowExcelExport="true" AllowSelection="true"
@@ -57,15 +83,32 @@
 @code{
     public List<Order> Orders { get; set; }
     SfGrid<Order> Grid;
+    SfGrid<FoodStuff> FoodGrid;
+    SfButton ToggleBtn;
+    List<FoodStuff> Entities;
 
-    protected override void OnInitialized() => Orders = Enumerable.Range(1, 75).Select(x => new Order
+    private async Task OnToggleClick(MouseEventArgs args)
     {
-        OrderID = 1000 + x,
-        CustomerID = new[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" }[new Random().Next(5)],
-        Freight = 2.1 * x,
-        OrderDate = DateTime.Now.AddDays(-x),
-        ShipCountry = new[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" }[new Random().Next(5)]
-    }).ToList();
+        await Service.CreateAsync(new FoodstuffModel { Name = new Random().Next(0, 99999).ToString() });
+        await Service.SaveAsync();
+        await RefreshData();
+    }
+
+    private async Task RefreshData() => Entities = (await Service.GetAllAsync()).ToList();
+
+    protected override async void OnInitialized()
+    {
+        await RefreshData();
+
+        Orders = Enumerable.Range(1, 75).Select(x => new Order
+        {
+            OrderID = 1000 + x,
+            CustomerID = new[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" }[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+            ShipCountry = new[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" }[new Random().Next(5)]
+        }).ToList();
+    }
 
     public void ToolbarClick(ClickEventArgs args)
     {
@@ -82,6 +125,23 @@
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
         public string ShipCountry { get; set; }
+    }
+
+    private async Task DeleteSelectedRecords(MouseEventArgs obj)
+    {
+        foreach (var record in FoodGrid.SelectedRecords)
+            await Service.DeleteAsync(record.Id);
+
+        await Service.SaveAsync();
+        await RefreshData();
+    }
+
+    private void ToolbarKlick(ClickEventArgs obj)
+    {
+        switch (obj.Item.Id)
+        {
+            
+        }
     }
 
 }

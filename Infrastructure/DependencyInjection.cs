@@ -1,4 +1,5 @@
 ﻿using Application.Interfaces;
+using Application.Services;
 using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -13,4 +14,6 @@ public static class DependencyInjection
         services.AddDbContext<DataContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnectionString"), b => b.MigrationsAssembly(typeof(DataContext).Assembly.FullName)), ServiceLifetime.Transient);
         services.AddScoped<IApplicationDbContext>(provider => provider.GetService<DataContext>());
     }
+
+    public static void AddApplicationServices(this IServiceCollection services) => services.AddScoped<FoodstuffService>();
 }
