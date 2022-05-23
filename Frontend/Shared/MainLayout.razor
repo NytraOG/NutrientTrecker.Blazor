@@ -1,15 +1,17 @@
-﻿@inherits LayoutComponentBase
+﻿@using Syncfusion.Blazor.Navigations
+@inherits LayoutComponentBase
 @inject IJSRuntime JS
-@using Syncfusion.Blazor.Navigations
 <PageTitle>NutrientTrecker</PageTitle>
 <SfBreadcrumb >HENLO</SfBreadcrumb>
 <SfSidebar ID="Sidebar" Type="SidebarType.Push" Width="300px" DockSize="65px" EnableDock="true" @ref="Sidebar" @bind-IsOpen="SidebarToggle">
-    
+
 
     <div class="sidebar" style="position: fixed; z-index: 1200">
         <div class="topnav navbar navbar-dark">
             <button class="navbar-toggler" @onclick="ToggleNavMenu"/>
-            <a class="navbar-brand" href=""><span class="displayText" style="margin-right: 30px">NutrientTrecker</span></a>
+            <a class="navbar-brand" href="">
+                <span class="displayText" style="margin-right: 30px">NutrientTrecker</span>
+            </a>
         </div>
         <div >
             <NavMenu/>
@@ -17,7 +19,7 @@
     </div>
 </SfSidebar>
 <div class="main">
-   <div class="top-row px-4" style="z-index:1111;padding-top:0px">
+    <div class="top-row px-4" style="z-index:1111;padding-top:0px">
         <a href="https://www.syncfusion.com/blazor-components/" target="_blank">Blazor Components</a>
         <a href="https://blazor.syncfusion.com/documentation/" target="_blank">User Guide</a>
         <a href="http://blazor.syncfusion.com/" target="_blank">View Demos</a>
@@ -31,8 +33,12 @@
     .sidebar {
         width: 300px;
         min-width: 300px;
+        background-image: linear-gradient(180deg, #ffc107 0%, #0dcaf0 70%);
     }
-
+.scroller::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 0 10px #198754;
+    border-radius: 4px;
+}
     .navbar-toggler {
         display: inline-block;
         border: none;
@@ -183,31 +189,33 @@
 
 @code
 {
-    SfSidebar Sidebar; 
-	public bool SidebarToggle = true; 
-	public bool SidebarToggleFixed = false; 
-	public void ToggleNavMenu() 
-    { 
-		SidebarToggle = !SidebarToggle; 
-		SidebarToggleFixed = !SidebarToggleFixed; 
-	} 
-	//public async Task MouseIn(MouseEventArgs args) 
-	//{ 
-	//	var isSidebar = await JS.InvokeAsync<bool>("isSidebar", args.ClientX, args.ClientY); 
-	//	if (!SidebarToggle && isSidebar) 
-	//	{ 
-	//		SidebarToggle = true; 
-	//	} 
-	//} 
-	//public async Task MouseOut(MouseEventArgs args) 
-	//{ 
-	//	var isSidebar = await JS.InvokeAsync<bool>("isSidebar", args.ClientX, args.ClientY); 
-	//	if (SidebarToggle && !isSidebar) 
-	//	{ 
-	//		if(!SidebarToggleFixed) 
-	//		{ 
-	//			SidebarToggle = false; 
-	//		} 
-	//	} 
-	//}
+    SfSidebar Sidebar;
+    public bool SidebarToggle = true;
+    public bool SidebarToggleFixed;
+
+    public void ToggleNavMenu()
+    {
+        SidebarToggle = !SidebarToggle;
+        SidebarToggleFixed = !SidebarToggleFixed;
+    }
+
+    //public async Task MouseIn(MouseEventArgs args) 
+    //{ 
+    //	var isSidebar = await JS.InvokeAsync<bool>("isSidebar", args.ClientX, args.ClientY); 
+    //	if (!SidebarToggle && isSidebar) 
+    //	{ 
+    //		SidebarToggle = true; 
+    //	} 
+    //} 
+    //public async Task MouseOut(MouseEventArgs args) 
+    //{ 
+    //	var isSidebar = await JS.InvokeAsync<bool>("isSidebar", args.ClientX, args.ClientY); 
+    //	if (SidebarToggle && !isSidebar) 
+    //	{ 
+    //		if(!SidebarToggleFixed) 
+    //		{ 
+    //			SidebarToggle = false; 
+    //		} 
+    //	} 
+    //}
 }

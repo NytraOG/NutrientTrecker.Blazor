@@ -1,6 +1,5 @@
 ﻿using Frontend.Data;
 using Infrastructure;
-using Infrastructure.Persistence;
 using Syncfusion.Blazor;
 using Syncfusion.Licensing;
 
